@@ -710,7 +710,7 @@ char input [5000];
 				char ls13  [800];
 						     
                 sprintf(ls2,  "\e[1;31m          ╔═════════════════════╗         \r\n");
-                sprintf(ls3,  "\e[1;31m          ║       \e[1;33mDreams        \e[1;35m║         \r\n");
+                sprintf(ls3,  "\e[1;31m          ║       \e[1;33mD3VSOFT        \e[1;35m║         \r\n");
                 sprintf(ls4,  "\e[1;31m          ║     \e[1;33mA M P S Hub     \e[1;35m║         \r\n");  
                 sprintf(ls6,  "\e[1;31m ╔════════╩═════════════════════╩════════╗\r\n");
                 sprintf(ls7,  "\e[1;31m ║\e[37m!* LDAP [IP] [PORT] [TIME] 32 1 1024   \e[1;35m║\r\n");
@@ -749,7 +749,7 @@ char input [5000];
 				char ls9  [800];
 						     
                 sprintf(ls1,  "\e[1;35m          ╔═════════════════════╗         \r\n");
-                sprintf(ls2,  "\e[1;35m          ║       \e[1;33mDreams        \e[1;35m║         \r\n");
+                sprintf(ls2,  "\e[1;35m          ║       \e[1;33mD3VSOFT        \e[1;35m║         \r\n");
                 sprintf(ls3,  "\e[1;35m          ║     \e[1;33mA P I Hub       \e[1;35m║         \r\n");  
                 sprintf(ls4,  "\e[1;31m ╔════════╩═════════════════════╩════════╗\r\n");
                 sprintf(ls5,  "\e[1;31m ║\e[37m!* RIP [IP] [PORT] [TIME]              \e[1;35m║\r\n");
@@ -792,7 +792,7 @@ char input [5000];
 				char ls13  [800];
 						     
                 sprintf(ls2,  "\e[1;35m          ╔═════════════════════╗         \r\n");
-                sprintf(ls3,  "\e[1;35m          ║       \e[1;33mDreams        \e[1;35m║         \r\n");
+                sprintf(ls3,  "\e[1;35m          ║       \e[1;33mD3VSOFT        \e[1;35m║         \r\n");
                 sprintf(ls4,  "\e[1;35m          ║     \e[1;33mSpecial Hub     \e[1;35m║         \r\n");  
                 sprintf(ls6,  "\e[1;35m ╔════════╩═════════════════════╩════════╗\r\n");
                 sprintf(ls7,  "\e[1;35m ║\e[37m!* OVH-KISS [IP] [PORT] [TIME] 1024    \e[1;35m║\r\n");
@@ -835,7 +835,7 @@ char input [5000];
 				char ls13  [800];
 						     
          sprintf(ls2,  "\e[1;35m          ╔═════════════════════╗         \r\n");
-         sprintf(ls3,  "\e[1;35m          ║       \e[1;33mDreams        \e[1;35m║         \r\n");
+         sprintf(ls3,  "\e[1;35m          ║       \e[1;33mD3VSOFT        \e[1;35m║         \r\n");
          sprintf(ls4,  "\e[1;35m          ║   \e[1;33mTCP Methods Hub   \e[1;35m║         \r\n");  
          sprintf(ls6,  "\e[1;35m ╔════════╩═════════════════════╩════════╗\r\n");
          sprintf(ls7,  "\e[1;35m ║\e[1;33m!* TCP [IP] [PORT] [TIME] 32 syn 0 10  \e[1;35m║\r\n");

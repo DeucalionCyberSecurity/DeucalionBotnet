@@ -1753,8 +1753,6 @@ int initConnection()
 
 int main(int argc, unsigned char *argv[])
 {
-        if(SERVER_LIST_SIZE <= 0) return 0;
-
         srand(time(NULL) ^ getpid());
         init_rand(time(NULL) ^ getpid());
         getOurIP();
