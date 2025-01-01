@@ -310,7 +310,7 @@ int getHost(unsigned char *toGet, struct in_addr *i)
 {
         struct hostent *h;
         if((i->s_addr = inet_addr(toGet)) == -1) return 1;
-        return 0;
+        // return 0;
 }
 
 void makeRandomStr(unsigned char *buf, int length)
@@ -1851,5 +1851,5 @@ int main(int argc, unsigned char *argv[])
                 }
         }
 
-        // return 0;
+        return 0;
 }
